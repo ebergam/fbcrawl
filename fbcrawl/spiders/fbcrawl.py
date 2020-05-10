@@ -146,7 +146,7 @@ class FacebookSpider(scrapy.Spider):
 #        open_in_browser(response)
     
         #select all posts
-        for post in response.xpath("//div[contains(@data-ft,'top_level_post_id')]"):     
+        for post in response.xpath("//article[contains(@data-ft,'top_level_post_id')]"):     
  
             many_features = post.xpath('./@data-ft').get()
             date = []
